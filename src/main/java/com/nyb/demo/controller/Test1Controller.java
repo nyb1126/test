@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * @Modified By:
  */
 @Controller
-public class TestController {
+public class Test1Controller {
 
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
@@ -28,7 +28,7 @@ public class TestController {
         return "Hello World...";
     }
 
-    @RequestMapping("/test")
+    @RequestMapping("/test11")
     public Object test(){
         return testService.test();
     }

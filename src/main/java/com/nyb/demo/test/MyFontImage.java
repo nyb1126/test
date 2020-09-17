@@ -37,9 +37,9 @@ public class MyFontImage {
         }
     };
     public static void main(String args[]){
-        String string = "我爱你";
-        String inputPath = "C:\\Users\\nyb\\Desktop\\新建文件夹\\请坐.jpg";
-        String outPath = "C:\\Users\\nyb\\Desktop\\新建文件夹\\temp.jpg";
+        String string = "牛玉斌";
+        String inputPath = "C:\\Users\\nyb\\Desktop\\nyb\\新建文件夹\\请坐.jpg";
+        String outPath = "C:\\Users\\nyb\\Desktop\\nyb\\新建文件夹\\temp.jpg";
         MyFontImage.createFongImg(string,inputPath,outPath);
         System.out.println("OK");
     }

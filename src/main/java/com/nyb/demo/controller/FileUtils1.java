@@ -17,9 +17,9 @@ import java.io.IOException;
  * @Modified By:
  */
 @Controller
-public class FileUtils {
+public class FileUtils1 {
 
-    private static final Logger logger = LoggerFactory.getLogger(FileUtils.class);
+    private static final Logger logger = LoggerFactory.getLogger(FileUtils1.class);
 
     @Value("${file.upload.path}")
     private String uploadFilePth;
@@ -29,7 +29,7 @@ public class FileUtils {
         return "upload";
     }
 
-    @RequestMapping("/uploadFile")
+//    @RequestMapping("/uploadFile")
     @ResponseBody
     public String uploadFile(@RequestParam("file") MultipartFile file,String filePath) {
         logger.info("下载文件开始");
