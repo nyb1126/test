@@ -14,7 +14,7 @@ import java.security.Security;
 
 /**
  * @Author:nyb
- * @DESC: 256加密算法
+ * @DESC: AES256加密算法
  * @Date: Created in 16:57 2020/9/14
  * @Modified By:
  */
@@ -103,18 +103,25 @@ public class AES256 {
         }
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
+        String string ="" +
+                "6A6E424B74796C3133686B5337615332472B61446F413D3D" +
+                "4A3757665A304D364A343962464D532B7548655751413D3D" +
+                "6A374A643551532F3678506C4A5869433132723071673D3D" +
+                "";
         //需要加密的内容
-        String content = "1074304672";
+        String content = "qwe123!!!";
         //密钥
+//        String password = "";
         String password = "0f607264fc6318a92b9e13c65db7cd3";
         System.out.println("明文：" + content);
         System.out.println("key：" + password);
 
         byte[] encryptResult = AES256.encrypt(content, password);
         System.out.println("密文：" + AES256.parseByte2HexStr(encryptResult));
-
+        String string1 = encryptResult.toString();
+        System.out.println(string1);
         String decryptResult = AES256.decrypt(encryptResult, password);
         System.out.println("解密：" + decryptResult);
     }
